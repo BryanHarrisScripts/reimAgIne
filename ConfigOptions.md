@@ -89,3 +89,58 @@ Here's a comparative analysis between the configuration provided above and the p
 ---
 
 In summary, the suggested configuration for a 2-hour rendering target primarily modifies the ControlNet strength, Steps, Key frame frequency (K), Number of key frames, and Cross-frame attention update frequency to try and balance rendering time with quality. Some parameters from the original configuration were not provided in the suggested settings, like Preserve color, Base model, Added/Negative prompts, FreeU factors, and Gradient blending. The effectiveness of these changes would need to be tested in the actual rendering software to determine the impact on rendering time and quality.
+
+---
+
+Certainly! Here are your updated configuration options:
+
+**Title: Configuration for Rendering**
+
+---
+
+**General Settings:**
+- Prompt: Close up Portrait photo of a happy smiling beautiful woman in a worn mech suit, ((light bokeh)), intricate, (steel metal [rust]), elegant, sharp focus, photo by Greg Rutkowski, soft lighting, vibrant colors, masterpiece, ((streets)), detailed face
+- Seed: 3065812852
+- Run Options: Run All, Run 1st Key Frame, Run Key Frames, Run Propagation
+
+---
+
+**Advanced options for the 1st frame translation:**
+- Frame resolution: 512
+- ControlNet strength: 0.8
+- Denoising strength: 1 (0: fully recover the input, 1.05: fully rerender the input)
+- Preserve color: Yes
+- Crop Length: Left 0, Right 0, Top 0, Bottom 0
+- Control type: Canny (Low threshold: 50, High threshold: 100)
+- Steps: 25
+- CFG scale: 4.5
+- Base model: icbinpICantBelieveIts_seco
+- Added prompt: best quality, extremely detailed, full thick hair
+- Negative prompt: bald, forehead, nude, cross-eyed, inside, 3d, cartoon, anime, sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy, red eyes
+- FreeU first-stage backbone factor: 1
+- FreeU second-stage backbone factor: 1
+- FreeU first-stage skip factor: 1
+- FreeU second-stage skip factor: 1
+
+---
+
+**Advanced options for the key frame translation:**
+- Key frame frequency (K): 2
+- Number of key frames: 59
+- Cross-frame constraints: shape-aware fusion, pixel-aware fusion, color-aware AdaIN
+- Cross-frame attention: Start 0, End 1, Update frequency every N key frames: 5
+- Loose Cross-frame attention: Yes
+- Shape-aware fusion: Start 0, End 0.1
+- Pixel-aware fusion: Start 0.5, End 0.8, Strength 0.5, Detail level 0.9 (Use a low value to prevent artifacts)
+- Color-aware AdaIN: Start 1, End 1
+- Smooth fusion boundary: Yes
+
+---
+
+**Advanced options for the full video translation:**
+- Gradient blending: Yes
+- Number of parallel processes: 5
+
+---
+
+These configurations are aimed at achieving a rendering of a close-up portrait as described in the prompt, with specific parameters set to ensure quality and manage the rendering process across different stages of the translation.
