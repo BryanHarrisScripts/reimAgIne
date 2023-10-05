@@ -36,3 +36,56 @@ With the updated configuration settings and the new average time per frame, the 
 ---
 
 This method is simplified and does not take into account potential variations in frame processing time, system performance, or other factors that may affect rendering time. It's advised to monitor actual rendering times and adjust estimates accordingly for future projects.
+
+---
+
+Here's a comparative analysis between the configuration provided above and the previously suggested configuration for a 2-hour rendering target:
+
+**Title: Comparative Analysis for 2-hour Rendering Target**
+
+---
+
+**Advanced options for the 1st frame translation:**
+
+| Parameter                       | Original Configuration | Suggested Configuration for 2-hour Render |
+|---------------------------------|------------------------|-------------------------------------------|
+| Frame resolution                | 512                    | 512                                       |
+| ControlNet strength             | 0.8                    | 0.65                                      |
+| Denoising strength              | 1                      | 1                                         |
+| Steps                           | 25                     | 37                                        |
+| CFG scale                       | 4.5                    | 4.5                                       |
+| Control type                    | Canny                  | Canny                                     |
+| Preserve color                  | Yes                    | Not Provided                              |
+| Crop Length                     | 0, 0, 0, 0             | Not Provided                              |
+| Base model                      | icbinpICantBelieveIts_seco | Not Provided                         |
+| Added prompt                    | Best quality, extremely detailed, full thick hair | Not Provided |
+| Negative prompt                 | Various                | Not Provided                              |
+| FreeU first-stage backbone factor | 1                    | Not Provided                              |
+| FreeU second-stage backbone factor | 1                    | Not Provided                              |
+| FreeU first-stage skip factor   | 1                      | Not Provided                              |
+| FreeU second-stage skip factor  | 1                      | Not Provided                              |
+
+**Advanced options for the key frame translation:**
+
+| Parameter                       | Original Configuration | Suggested Configuration for 2-hour Render |
+|---------------------------------|------------------------|-------------------------------------------|
+| Key frame frequency (K)         | 2                      | 2.5                                       |
+| Number of key frames            | 59                     | 49                                        |
+| Cross-frame constraints         | Various                | Not Provided                              |
+| Cross-frame attention           | 0, 1, 5               | 0, 1, 7.5                                 |
+| Loose Cross-frame attention     | Yes                    | Not Provided                              |
+| Shape-aware fusion              | 0, 0.1                 | 0, 0.1                                    |
+| Pixel-aware fusion              | 0.5, 0.8, 0.5, 0.9     | 0.5, 0.8, 0.5, 0.9                         |
+| Color-aware AdaIN               | 1, 1                   | 1, 1                                      |
+| Smooth fusion boundary          | Yes                    | Not Provided                              |
+
+**Advanced options for the full video translation:**
+
+| Parameter                       | Original Configuration | Suggested Configuration for 2-hour Render |
+|---------------------------------|------------------------|-------------------------------------------|
+| Gradient blending               | Yes                    | Not Provided                              |
+| Number of parallel processes    | 5                      | 4.5                                       |
+
+---
+
+In summary, the suggested configuration for a 2-hour rendering target primarily modifies the ControlNet strength, Steps, Key frame frequency (K), Number of key frames, and Cross-frame attention update frequency to try and balance rendering time with quality. Some parameters from the original configuration were not provided in the suggested settings, like Preserve color, Base model, Added/Negative prompts, FreeU factors, and Gradient blending. The effectiveness of these changes would need to be tested in the actual rendering software to determine the impact on rendering time and quality.
