@@ -150,3 +150,43 @@ Certainly! Here are your updated configuration options:
 ---
 
 These configurations are aimed at achieving a rendering of a close-up portrait as described in the prompt, with specific parameters set to ensure quality and manage the rendering process across different stages of the translation.
+
+Title: Configuration for Enhanced Portrait Rendering
+
+- **Prompt**: Close-up portrait photo of a joyful, beautiful woman donned in a rustic mech suit, accompanied by light bokeh, intricate steel metal rust, elegant aesthetics, precise focus, captured by Greg Rutkowski, soft lighting, vibrant colors, a masterpiece backdrop of streets, and a finely detailed face.
+- **Seed**: 3065812852
+- **Run Options**: Run All, Run 1st Key Frame, Run Key Frames, Run Propagation
+
+**Advanced Options for the 1st Frame Translation**:
+- Frame Resolution: 512
+- ControlNet Strength: 1.65
+- Denoising Strength: 0.65 (0: Fully recover the input, 1.05: Fully rerender the input)
+- Preserve Color: Yes
+- Crop Length: Left 0, Right 0, Top 0, Bottom 0
+- Control Type: Canny (Low Threshold: 100, High Threshold: 200)
+- Steps: 40
+- CFG Scale: 4.5
+- Base Model: icbinpICantBelieveIts_seco
+- Added Prompt: Best quality, extremely detailed, full thick hair
+- Negative Prompt: Bald, forehead, nude, cross-eyed, inside, 3D, cartoon, anime, sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, (monochrome), (grayscale), skin spots, acne, skin blemishes, bad anatomy, red eyes
+- FreeU First-Stage Backbone Factor: 1
+- FreeU Second-Stage Backbone Factor: 1
+- FreeU First-Stage Skip Factor: 1
+- FreeU Second-Stage Skip Factor: 1
+
+**Advanced Options for the Key Frame Translation**:
+- Key Frame Frequency (K): 3
+- Number of Key Frames: 39
+- Selected Cross-Frame Constraints: Shape-aware fusion, Pixel-aware fusion, Color-aware AdaIN
+- Cross-Frame Attention: Start 0, End 1, Update Frequency every N Key Frames: 1
+- Loose Cross-Frame Attention: Yes
+- Shape-Aware Fusion: Start 0, End 0.1
+- Pixel-Aware Fusion: Start 0.5, End 0.8, Strength 0.5, Detail Level 0.9 (Use a low value to prevent artifacts)
+- Color-Aware AdaIN: Start 1, End 1
+- Smooth Fusion Boundary: Yes
+
+**Advanced Options for the Full Video Translation**:
+- Gradient Blending: Yes
+- Number of Parallel Processes: 4
+
+The outlined configuration is tailored for rendering a portrait with enhanced details and aesthetics, utilizing specified network models and processing parameters.
