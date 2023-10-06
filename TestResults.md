@@ -1,6 +1,6 @@
 Certainly! Below is a comparison table between the two configurations for rendering and enhanced portrait rendering:
 
-| Parameter / Settings             | Configuration for Rendering                 | Configuration for Enhanced Portrait Rendering        |
+| Parameter / Settings             | Configuration for Rendering VID1                | Configuration for Rendering VID2       |
 |----------------------------------|---------------------------------------------|------------------------------------------------------|
 | **General Settings**             |                                             |                                                      |
 | Prompt                           | Close up Portrait photo...                  | Close-up portrait photo...                           |
@@ -35,5 +35,6 @@ Certainly! Below is a comparison table between the two configurations for render
 | **Full Video Translation Options**|                                            |                                                      |
 | Gradient Blending                | Yes                                         | Yes                                                  |
 | Number of Parallel Processes     | 5                                           | 4                                                    |
+| Est. Render Time     |                                            | 1.7 hrs                                             |
 
-This table layout allows for a straightforward comparison between the two configurations across all the specified parameters and settings.
+---
