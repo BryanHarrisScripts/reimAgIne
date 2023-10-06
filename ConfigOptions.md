@@ -1,3 +1,9 @@
+- High ControlNet strength
+- Low Denoising strength
+- Low Key frame frequency for video with quick motions
+- Activate loose-cross-frame-attention:
+- https://github.com/williamyang1991/Rerender_A_Video#loose-cross-frame-attention
+
 Title: Estimating Rendering Time Based on Specific Configuration Settings
 
 ---
