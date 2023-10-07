@@ -27,7 +27,7 @@
 | Cross-frame Attention            | Start 0, End 1, Update every 5 frames       | Start 0, End 1, Update every 1 frames | Start 0, End 1, Update every 1 frames  |
 | Loose Cross-frame Attention      | Yes                                         | Yes                                   | True                                   |
 | Shape-Aware Fusion               | Start 0, End 0.1                            | Start 0, End 0.1                      | Start 0, End 0.1                       |
-| Pixel-Aware Fusion               | Start 0.5, End 0.8, Strength 0.5, ...       | Start 0.5, End 0.8, Strength 0.5, ... | Start 0.5, End 0.8, Strength 0.5, ...   |
+| Pixel-Aware Fusion               | Start 0.5, End 0.8, Strength 0.5, ...       | Start 0.5, End 0.8, Strength 0.5, ... | Start 0.5, End 0.8, Strength 0.5, 0.5   |
 | Color-Aware AdaIN                | Start 1, End 1                              | Start 1, End 1                        | Start 1, End 1                         |
 | Smooth Fusion Boundary           | Yes                                         | Yes                                   | True                                   |
 | **Full Video Translation Options**|                                            |                                       |                                        |
