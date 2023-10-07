@@ -1,4 +1,8 @@
-| Parameter / Settings             | Configuration for Rendering VID1           | Configuration for Rendering VID2      | New Configuration                      |
+---
+
+### Based on 3-5 second video - Render goal 2-3 hour max, best quality
+
+| Parameter / Settings             | Config Render VID1           | Config Render VID2      | Config Render VID3                      |
 |----------------------------------|---------------------------------------------|---------------------------------------|----------------------------------------|
 | **General Settings**             |                                             |                                       |                                        |
 | Prompt                           | Close up Portrait photo...                  | Close-up portrait photo...            | Close up Portrait photo of a happy...  |
