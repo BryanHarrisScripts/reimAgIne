@@ -39,3 +39,78 @@
 | Number of Parallel Processes     | 5                                           | 4                                     | 4                                      |
 | Est. Render Time                 |                                             | 1.7 hrs                                |                                        |
 
+
+
+# Rendering Configuration
+
+## Prompt
+- Close-up Portrait photo of a happy, smiling, beautiful 30-year-old woman in a worn mech suit.
+- Additional Attributes:
+  - Light bokeh
+  - Intricate design
+  - Steel metal with rust
+  - Elegant look
+  - Sharp focus
+  - Photo by Greg Rutkowski
+  - Soft lighting
+  - Vibrant colors
+  - Masterpiece
+  - Streets in the background
+  - Detailed face
+
+## Seed
+- 3065812852
+
+## Run Settings
+- Run All
+- Run 1st Key Frame
+- Run Key Frames
+- Run Propagation
+
+## Advanced Options for the 1st Frame Translation
+- Frame Resolution: 640
+- ControlNet Strength: 1.55
+- Denoising Strength: 0.75
+- Preserve Color: Yes
+- Crop Length (Left, Right, Top, Bottom): 0, 0, 0, 0
+- Control Type: canny
+  - Canny Low Threshold: 100
+  - Canny High Threshold: 200
+- Steps: 20
+- CFG Scale: 4.5
+- Base Model: icbinpICantBelieveIts_seco
+- Added Prompt: best quality, extremely detailed, full thick hair
+- Negative Prompt: 
+  - bald, forehead, nude, cross-eyed, inside, 3d, cartoon, anime, sketches,
+  - Quality Tags: worst quality:2, low quality:2, normal quality:2
+  - Color Tags: monochrome, grayscale
+  - Texture and Detail Tags: skin spots, acnes, skin blemishes, bad anatomy, red eyes
+
+## FreeU Settings
+- First-stage Backbone Factor: 1
+- Second-stage Backbone Factor: 1
+- First-stage Skip Factor: 1
+- Second-stage Skip Factor: 1
+
+## Advanced Options for the Key Frame Translation
+- Key Frame Frequency (K): 1
+- Number of Key Frames: 74
+- Cross-frame Constraints:
+  - Shape-aware fusion
+  - Pixel-aware fusion
+  - Color-aware AdaIN
+- Cross-frame Attention:
+  - Start: 0
+  - End: 1
+  - Update Frequency: 1
+- Shape-aware Fusion Range: 0 to 0.1
+- Pixel-aware Fusion:
+  - Start: 0.5
+  - End: 0.8
+  - Strength: 0.55
+  - Detail Level: 0.5
+  - Smooth Fusion Boundary: Yes
+
+## Advanced Options for the Full Video Translation
+- Gradient Blending: Yes
+- Number of Parallel Processes: 4
